@@ -4,7 +4,7 @@ import io.reactivex.Scheduler
 
 interface ISchedulerProvider {
 
-    fun ui():Scheduler
+    fun ui(): Scheduler
 
-    fun io():Scheduler
+    fun io(): Scheduler
 }

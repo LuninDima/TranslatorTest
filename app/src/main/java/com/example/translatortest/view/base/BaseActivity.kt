@@ -11,7 +11,7 @@ abstract class BaseActivity<T : AppState> : AppCompatActivity(), View {
 
     protected abstract fun createPresenter(): Presenter<T, View>
 
-   abstract override fun renderData(appState: AppState)
+    abstract override fun renderData(appState: AppState)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -7,7 +7,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.translatortest.R
 import com.example.translatortest.model.data.DataModel
-import org.w3c.dom.Text
 
 
 class MainAdapter(

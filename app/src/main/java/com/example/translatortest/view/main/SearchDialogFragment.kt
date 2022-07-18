@@ -9,10 +9,10 @@ import android.view.ViewGroup
 import com.example.translatortest.databinding.SearchDialogFragmentBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class SearchDialogFragment: BottomSheetDialogFragment() {
+class SearchDialogFragment : BottomSheetDialogFragment() {
     private var _binding: SearchDialogFragmentBinding? = null
     private val binding get() = _binding!!
-private var onSearchClickListener: OnsearchClickListener? = null
+    private var onSearchClickListener: OnsearchClickListener? = null
     private val textWatcher = object : TextWatcher {
         override fun onTextChanged(p0: CharSequence?, start: Int, before: Int, count: Int) {
             if (binding.searchEditText.text != null &&
@@ -32,13 +32,14 @@ private var onSearchClickListener: OnsearchClickListener? = null
         override fun beforeTextChanged(p0: CharSequence?, start: Int, count: Int, after: Int) {
         }
     }
-        private val onSearchButtonClickListener =  View.OnClickListener {
-            onSearchClickListener?.onClick(binding.searchEditText.text.toString())
-            dismiss()
-        }
-        internal fun setOnSearchClickListener(listener: OnsearchClickListener){
-            onSearchClickListener = listener
-        }
+    private val onSearchButtonClickListener = View.OnClickListener {
+        onSearchClickListener?.onClick(binding.searchEditText.text.toString())
+        dismiss()
+    }
+
+    internal fun setOnSearchClickListener(listener: OnsearchClickListener) {
+        onSearchClickListener = listener
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -64,16 +65,17 @@ private var onSearchClickListener: OnsearchClickListener? = null
         }
     }
 
-    interface OnsearchClickListener{
+    interface OnsearchClickListener {
         fun onClick(searchWord: String)
     }
-companion object{
-    fun newInstance(): SearchDialogFragment {
-        return SearchDialogFragment()
-    }
-}
 
+    companion object {
+        fun newInstance(): SearchDialogFragment {
+            return SearchDialogFragment()
+        }
     }
+
+}
 
 
 

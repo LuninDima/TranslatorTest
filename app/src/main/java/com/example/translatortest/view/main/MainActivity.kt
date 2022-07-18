@@ -7,8 +7,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.translatortest.R
 import com.example.translatortest.databinding.ActivityMainBinding
-import com.example.translatortest.model.data.DataModel
 import com.example.translatortest.model.data.AppState
+import com.example.translatortest.model.data.DataModel
 import com.example.translatortest.presentation.MainAdapter
 import com.example.translatortest.presenter.Presenter
 import com.example.translatortest.view.base.BaseActivity
